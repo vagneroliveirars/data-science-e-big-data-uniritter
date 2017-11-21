@@ -12,7 +12,7 @@ Neste trabalho, essa técnica é aplicada em reviews de produtos da Amazon. O ob
   
 ## Passos realizados na preparação dos dados como entrada para o(s) algoritmo(s) de ML
 
-A base contém 278677 reviews de roupas, sapatos, e jóias.
+A base contém 278677 reviews de roupas, sapatos e jóias.
 
 Exemplo de review:
 
@@ -37,7 +37,7 @@ Exemplo de review:
 Importação dos dados no MongoDB:
 
 ```sh
-$ mongoimport --db amazon --collection clothing --file Clothing_Shoes_and_Jewelry_5.json
+$ mongoimport --db amazon --collection reviews --file Clothing_Shoes_and_Jewelry_5.json
 ```
 
 Classificação dos dados como positive, negative e neutral no MongoDB:
@@ -45,7 +45,7 @@ Classificação dos dados como positive, negative e neutral no MongoDB:
 Negative
 ```javascript
 try {
-   db.clothing.updateMany(
+   db.reviews.updateMany(
       { overall: {$lte: 2.0} },
       { $set: { "classification" : "Negative" } }
    );
@@ -57,7 +57,7 @@ try {
 Neutral
 ```javascript
 try {
-   db.clothing.updateMany(
+   db.reviews.updateMany(
       { overall: {$eq: 3.0} },
       { $set: { "classification" : "Neutral" } }
    );
@@ -69,7 +69,7 @@ try {
 Positive
 ```javascript
 try {
-   db.clothing.updateMany(
+   db.reviews.updateMany(
       { overall: {$gt: 3.0} },
       { $set: { "classification" : "Positive" } }
    );
