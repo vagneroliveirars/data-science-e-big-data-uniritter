@@ -78,7 +78,7 @@ try {
 }
 ```
 
-## Notebook com os scripts utilizados:
+## Notebook com os scripts utilizados, análise exploratória de dados e resultados:
 
 [NotebookAnaliseSentimentosAmazon.ipynb](NotebookAnaliseSentimentosAmazon.ipynb)
 
