@@ -10,7 +10,7 @@ A análise de sentimentos é uma técnica que consiste em extrair informações 
 
 Neste trabalho, essa técnica é aplicada em reviews de produtos da Amazon. O objetivo é saber se o review foi negativo, neutro ou positivo.
   
-## Passos realizados na preparação dos dados como entrada para o(s) algoritmo(s) de ML
+## Passos realizados na preparação dos dados como entrada para o(s) algoritmo(s) de machine learning
 
 A base contém 278677 reviews de roupas, sapatos e jóias.
 
