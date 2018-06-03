@@ -7,7 +7,7 @@ Neste notebook o modelo atingiu uma acurácia de 64%, treinando em 6000 amostras
 Foi utilizada a seguinte estrutura de diretórios:
 
 * project
-  * data
+  * dataset
     * train
       * dogs
       * cats
